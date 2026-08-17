@@ -2,6 +2,8 @@
 
 Language Connect AI is a responsive, accessible translator for English and the 22 languages in the Eighth Schedule of the Constitution of India. It combines a React interface, a protected serverless backend, Sarvam AI translation and speech recognition, and optional read-aloud output.
 
+Live application: [languageconnectai.vercel.app](https://languageconnectai.vercel.app)
+
 ## Supported languages
 
 English, Assamese, Bengali, Bodo, Dogri, Gujarati, Hindi, Kannada, Kashmiri, Konkani, Maithili, Malayalam, Manipuri, Marathi, Nepali, Odia, Punjabi, Sanskrit, Santali, Sindhi, Tamil, Telugu, and Urdu.
