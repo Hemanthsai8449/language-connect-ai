@@ -82,7 +82,7 @@ The real `.env` file and Vercel's local `.vercel` project metadata are excluded 
 
 The browser sends `{ text, sourceLanguage, targetLanguage }` to `/api/translate`. The serverless Function validates the exact 23-language allowlist and length, retrieves `SARVAM_API_KEY` on the server, calls Sarvam AI, and returns only the translated text and a request ID. For voice input, the browser sends a maximum 20-second recording to `/api/transcribe`; the Function enforces a 2 MiB limit and forwards it to Sarvam `saaras:v3` without exposing the key. For supported read-aloud voices, `/api/speech` streams audio from Sarvam.
 
-Translation API routes are limited to 30 requests per IP per minute, speech generation to 12, and transcription to 8. Request bodies are validated, provider errors are normalized, responses are not cached, and submitted text or audio is not stored by this app. Sarvam AI still processes submitted content, so review its terms before handling sensitive material.
+The production Vercel site uses a Firewall rule that limits `/api/*` to 20 combined requests per IP per minute. The optional Netlify configuration separately limits translation to 30 requests, speech generation to 12, and transcription to 8. Request bodies are validated, provider errors are normalized, responses are not cached, and submitted text or audio is not stored by this app. Sarvam AI still processes submitted content, so review its terms before handling sensitive material.
 
 ## Product notes
 
